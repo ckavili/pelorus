@@ -9,6 +9,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
+      - name: Set up Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.5.2
+
+      - name: Update helm deps
+        run: helm dep update
+
       - name: Conftest
         uses: redhat-cop/github-actions/confbatstest@master
         with:
