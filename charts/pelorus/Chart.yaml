@@ -22,8 +22,8 @@ appVersion: 1.2.2+13.g8d66bdd
 
 dependencies:
   - name: webhooks
-    version: v1.1.2
-    repository: file://./charts/pelorus/charts/webhooks
+    version: v1.1.1
+    repository: file://./charts/webhooks
   - name: exporters
     version: v1.1.1
-    repository: file://./charts/pelorus/charts/exporters
+    repository: file://./charts/exporters
