@@ -15,7 +15,7 @@ jobs:
           version: v3.5.2
 
       - name: Update helm deps
-        run: helm dep update
+        run: helm dep update charts/pelorus
 
       - name: Conftest
         uses: redhat-cop/github-actions/confbatstest@master
