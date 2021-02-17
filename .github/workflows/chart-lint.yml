@@ -1,5 +1,5 @@
 name: Chart Lint
-on: [push, pull_request]t
+on: [push, pull_request]
 jobs:
   lint:
     name: Lint
