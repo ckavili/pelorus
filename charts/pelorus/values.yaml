@@ -60,6 +60,3 @@ webhooks:
       memory_limit: 512Mi
 
 snapshot_schedule: "@monthly"
-
-
- # oc create secret generic gitlab-secret --from-literal=GIT_USER=idmsa --from-literal=GIT_TOKEN=Hx-xHnwpdrTpZPyQE1iz --from-literal=GIT_API=http://gitlab-ce.gitlab.svc.cluster.local/api/v4/ --from-literal=GIT_PROVIDER=gitlab  -n pelorus %  
