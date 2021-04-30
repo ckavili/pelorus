@@ -30,8 +30,8 @@ exporters:
     source_url: https://github.com/konveyor/pelorus.git
   - app_name: committime-generic
     env_from_secrets:
-    - github-secret
     - mongodb-build-webhook
+    - gitlab-secret
     source_context_dir: exporters/
     extraEnv:
     - name: APP_FILE
@@ -40,8 +40,8 @@ exporters:
       value: DEBUG
     - name: PROVIDER
       value: "webhook"
-    source_ref: master
-    source_url: https://github.com/konveyor/pelorus.git
+    source_ref: webhook-exporter
+    source_url: https://github.com/ckavili/pelorus.git
 
 webhooks:
   instances:
@@ -60,3 +60,6 @@ webhooks:
       memory_limit: 512Mi
 
 snapshot_schedule: "@monthly"
+
+
+ # oc create secret generic gitlab-secret --from-literal=GIT_USER=idmsa --from-literal=GIT_TOKEN=Hx-xHnwpdrTpZPyQE1iz --from-literal=GIT_API=http://gitlab-ce.gitlab.svc.cluster.local/api/v4/ --from-literal=GIT_PROVIDER=gitlab  -n pelorus %  
